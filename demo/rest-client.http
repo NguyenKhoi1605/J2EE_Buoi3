@@ -1,0 +1,46 @@
+### Book Manager REST API Tests
+### Use this file with VS Code REST Client extension or Postman
+
+@baseUrl = http://localhost:8080/api/books
+
+### Get All Books
+GET {{baseUrl}}
+Accept: application/json
+
+### Get Book by ID
+GET {{baseUrl}}/1
+Accept: application/json
+
+### Create a New Book
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin"
+}
+
+### Create Another Book
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Effective Python",
+  "author": "Joshua Blich"
+}
+
+### Update Book by ID
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "title": "Clean Code Updated",
+  "author": "Robert C. Martin"
+}
+
+### Delete Book by ID
+DELETE {{baseUrl}}/1
+
+### Get All Books After Operations
+GET {{baseUrl}}
+Accept: application/json
